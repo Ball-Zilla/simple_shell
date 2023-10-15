@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
-#include "your_custom_header.h"  // Include your custom header file if needed
+#include "shell.h"  // Include your custom header file if needed
 
 typedef struct {
     char **tokens;
@@ -52,10 +52,3 @@ int builtin_unset_env(data_of_program *data) {
 
     return 0;
 }
-
-int main() {
-    // Your main program logic here
-
-    return 0;
-}
-
