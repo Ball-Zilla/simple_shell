@@ -2,12 +2,19 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
-#include "shell.h"  // Include your custom header file if needed
+#include "shell.h"
 
-typedef struct {
-    char **tokens;
-    char *command_name;
-} data_of_program;
+/**
+ * builtin_env - 
+ * @data: struct for the program's data
+ * Return: Zero if success, or an error number if an issue occurs.
+ */
+int builtin_env(data_of_program *data){
+	if (data->tokens[1] == NULL)
+		return (0);
+	return 0;
+}
+
 
 /**
  * builtin_set_env - Set an environment variable.
@@ -15,7 +22,6 @@ typedef struct {
  * Return: Zero if success, or an error number if an issue occurs.
  */
 int builtin_set_env(data_of_program *data) {
-    // Validate args
     if (data->tokens[1] == NULL || data->tokens[2] == NULL) {
         return 0;
     }
@@ -37,7 +43,6 @@ int builtin_set_env(data_of_program *data) {
  * Return: Zero if success, or an error number if an issue occurs.
  */
 int builtin_unset_env(data_of_program *data) {
-    // Validate args
     if (data->tokens[1] == NULL) {
         return 0;
     }

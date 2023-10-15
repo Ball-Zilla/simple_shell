@@ -67,4 +67,4 @@ int _print_error(int errorcode, data_of_program *data)
 		_printe(": Permission denied\n");
 	}
 	return (0);
-}}
+}
