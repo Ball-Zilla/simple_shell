@@ -21,7 +21,7 @@ int find_program(data_of_program *data)
 
 	free(data->tokens[0]);
 	data->tokens[0] = str_concat(str_duplicate("/"), data->command_name);
-	
+
 	if (!data->tokens[0])
 		return (2);
 
