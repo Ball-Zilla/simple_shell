@@ -38,7 +38,7 @@ int builtin_env(data_of_program *data)
 						env_set_key(cpname, var_copy, data);
 						free(var_copy);
 					}
-					return 0;
+					return (0);
 				}
 			}
 			cpname[i] = data->tokens[1][i];
@@ -47,7 +47,7 @@ int builtin_env(data_of_program *data)
 		perror(data->command_name);
 		errno = 127;
 	}
-	return 0;
+	return (0);
 }
 
 
